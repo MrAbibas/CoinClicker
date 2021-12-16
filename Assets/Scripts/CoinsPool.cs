@@ -28,7 +28,7 @@ public class CoinsPool : MonoBehaviour
     }
     private void AddCoinToStack()
     {
-        Coin newCoin = Instantiate(_coinPrefab, transform.position, Quaternion.identity);
+        Coin newCoin = Instantiate(_coinPrefab, transform.position,Quaternion.identity);
         coins.Push(newCoin);
     }
 }
