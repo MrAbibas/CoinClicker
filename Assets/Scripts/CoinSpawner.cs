@@ -6,10 +6,9 @@ public class CoinSpawner : MonoBehaviour
     public UnityEvent onCoinSpawned;
     [SerializeField]
     private CoinsPool _coinsPool;
-    void Start()
+    private void Awake()
     {
         onCoinSpawned = new UnityEvent();
-        Spawn();
     }
     public void Spawn()
     {
