@@ -24,4 +24,9 @@ public class Coin : MonoBehaviour
         transform.position = position;
         _rigidbody.isKinematic = false;
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Chest>())
+            onChestCollision?.Invoke(this);
+    }
 }

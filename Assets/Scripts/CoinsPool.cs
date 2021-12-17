@@ -29,6 +29,7 @@ public class CoinsPool : MonoBehaviour
     private void AddCoinToStack()
     {
         Coin newCoin = Instantiate(_coinPrefab, transform.position, Quaternion.identity);
+        newCoin.onChestCollision.AddListener(Push);
         coins.Push(newCoin);
     }
 }
